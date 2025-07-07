@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header id="header">
+    <div class="container">
+      <nav>
+        <img src="../full/LOGO.WHITE.png" alt="logo" class="logo" />
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="nav-links">
+          <li><a href="#heade">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-sec" id="hero">
+    <div class="container">
+      <div class="text">
+        <p>Front end Developer <br> UX/UI Designer</p>
+        <h1>Hi, I'm <span>Laiba</span><br>From Pakistan</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container row">
+      <div class="about-col-1">
+        <img src="../girl.png" alt="About-Image" class="img-about">
+      </div>
+      <div class="about-col-2">
+        <h1>About Me</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, placeat ex delectus illum autem...</p>
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+          <p class="tab-links" onclick="openTab('experience')">Experience</p>
+          <p class="tab-links" onclick="openTab('education')">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>Ms Office</span><br>Ms Word, Excel, PowerPoint</li>
+            <li><span>UI/UX</span><br>Designing</li>
+            <li><span>Front End Web Developer</span><br>HTML, CSS, JS</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>Fresh Candidate</span><br>Entry Level</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>Matriculation</span><br>Science, Karachi Board (2024)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <h1 class="section-title">My Services</h1>
+      <div class="services-list">
+        <div>
+          <h2>Frontend Web developer</h2>
+          <p>Frontend Web Developer | HTML, CSS, JavaScript | Responsive & Clean UI Designs....</p>
+        </div>
+        <div>
+          <h2>UX/UI Designer</h2>
+          <p>I'm a UI/UX Designer who creates visually appealing and user-friendly interfaces. I focus on designing intuitive layouts that enhance user experience and meet client goals....</p>
+        </div>
+         <div>
+          <h2>UX/UI Designer</h2>
+          <p>I'm a UI/UX Designer who creates visually appealing and user-friendly interfaces. I focus on designing intuitive layouts that enhance user experience and meet client goals....</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+<!-- Experience Section -->
+<section class="experience" id="experience">
+  <div class="container">
+    <h1 class="section-title">Project</h1>
+    <div class="experience-list">
+      <div class="experience-item">
+        <div class="exp-header">
+          <img src="https://cdn-icons-png.flaticon.com/512/2950/2950651.png" alt="Project Icon" />
+          <div>
+            <h2>Project Title</h2>
+            <p class="exp-role">Frontend Developer</p>
+          </div>
+        </div>
+        <p class="exp-desc">
+          Short description of the project. Highlight tools like HTML, CSS, JS, or Figma.
+        </p>
+        <a href="../full/final12/" target="_blank" class="view-link">🔗 View Project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact Section -->
+  
+    <section class="contact" id="contact">
+        <div class="container">
+            <h1 class="section-title">Get in Touch</h1>
+            <p>If you’d like to work together or have any questions, feel free to contact me.</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="6" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+  <div class="footer-container">
+    <p>© 2025 Laiba Kamran. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+<script>
+    function openTab(tabName) {
+      var tabLinks = document.getElementsByClassName("tab-links");
+      var tabContents = document.getElementsByClassName("tab-contents");
+
+      for (let i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].classList.remove("active-link");
+      }
+
+      for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].classList.remove("active-tab");
+      }
+
+      document.getElementById(tabName).classList.add("active-tab");
+      event.currentTarget.classList.add("active-link");
+    }
+  </script>
+
+
+
+</body>
+</html>
